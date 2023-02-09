@@ -1,0 +1,22 @@
+
+how do i ssh from fe80::81ad:174b:350a:f182 to fe80::81ad:174b:350a:f182
+
+To SSH from one device to another using IPv6 link-local addresses, you can use the following steps:
+
+    Open a terminal on the source device.
+
+    Type the following command to initiate an SSH connection:
+
+scss
+
+ssh -6 <user>@fe80::81ad:174b:350a:f182
+
+Note: Replace "<user>" with the username on the target device.
+
+    If prompted, enter the password for the user account on the target device.
+
+    If the SSH connection is successful, you should see a command prompt on the target device.
+
+Note: To use link-local addresses for SSH connections, the two devices must be on the same network segment, and you will need to ensure that your network configuration supports communication using link-local addresses.
+
+Also, It's worth mentioning that link-local addresses are used for communication within a single network segment and are not meant to be used for communication over a wide area network. In most cases, it's recommended to use globally routable IP addresses or domain names for SSH connections between devices on different networks.
